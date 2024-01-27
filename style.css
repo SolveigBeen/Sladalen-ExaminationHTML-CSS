@@ -16,35 +16,62 @@ body {
 /*Common Font-styles */
 
 .font--h1 {
-  font-size: 7vw;
+  font-size: 20vw;
+  @media screen and (min-width: 650px) {
+    font-size: 5vw; 
+   }
 }
 
 .font--h2 {
-   font-size: 4vw;
+   font-size: 15vw;
+   @media screen and (min-width: 650px) {
+    font-size: 3vw; 
+   }
  }
 
  .font--h3 {
-   font-size: 1.5rem;
+   font-size: 10vw;
    @media screen and (min-width: 650px) {
-    font-size: 2rem; 
+    font-size:3vw; 
    }
  }
 .font--text {
   color:black;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 6vw;
+  font-weight: 400;
   line-height: 150%;
   margin:4px;
   @media screen and (min-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1vw;
   }
 }
 
-.font--black {
-  color:black;
+.font--white {
+  color:rgb(255, 255, 255);
 }
 
+.font--large {
+  font-size: 1em;
+  @media screen and (min-width: 768px) {
+    font-size: 1.3em;
+}
+}
 
+.link--noDecoration {
+  text-decoration: none;
+}
+
+.figure__wrapper{
+  padding:2rem;
+}
+.image__element {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px 5px rgb(105, 105, 105);
+  margin-bottom:3vh;
+}
 
 #container {
  max-width: 95vw;
@@ -54,15 +81,30 @@ body {
 /*   Header   */
 .header__layout{
   display:flex;
-  background-image: url('images/Sladalen\ 4.jpg') ;
-  background-size: cover;
+
   position: relative;
-  height: 30vh;
+
   @media screen and (min-width: 768px) {
-    height: 50vh;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center; /* Center align horizontally and vertically */
+  }
+}
+
+.header__layout--index{
+  background-image: url('images/Sladalen\ 4.jpg') ;
+  background-size: cover;
+  height: 30vh;
+  @media screen and (min-width: 768px) {
+    height: 50vh;
+  }
+}
+
+.header__layout--content{
+  height: 15vh;
+  @media screen and (min-width: 768px) {
+    height: 30vh;
   }
 }
 
@@ -112,6 +154,8 @@ nav a:hover {
   text-decoration: underline;
 } 
 
+
+
 nav > ul {
   list-style: none;
   display:flex;
@@ -126,9 +170,10 @@ nav > ul {
 nav > ul > li {
   margin-right: 20px;
   @media screen and (min-width: 768px) {
- 
   }  
  }
+
+
 
 
 .section__container {
@@ -151,7 +196,7 @@ nav > ul > li {
 }
 
 
-.setion__card{ 
+.section__card{ 
   background-size: cover;
   display:flex;
   align-items: center;
@@ -255,3 +300,45 @@ footer {
    height:300px; 
    border:0; 
 }
+
+
+
+/*   pages */
+
+.main__container {
+  padding: 3vh 1vw;
+  width:100%;
+  margin:auto; 
+  display: grid;
+  grid-template-columns:1fr;
+  
+  gap: 1rem;
+  @media screen and (min-width: 768px) {
+    width:90%;
+   
+    grid-template-columns: 2fr 1fr ;
+ 
+  }
+}
+
+.article__content {
+ padding:2rem;
+
+  background-color: rgb(35, 36, 36);
+  grid-column: 1;
+  @media screen and (min-width: 768px) {
+    padding:2rem;
+     
+   } 
+}
+
+.aside__content {
+  padding:2rem;
+  grid-column: 1;
+  background-color: bisque;
+  @media screen and (min-width: 768px) {
+    grid-column: 2;
+  }
+}
+
+
