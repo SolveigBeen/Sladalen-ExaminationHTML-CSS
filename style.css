@@ -1,0 +1,257 @@
+* {
+padding:0;
+margin:0;
+box-sizing: border-box;
+font-family: 'Literata', serif;
+color: rgb(255, 255, 255);}
+
+body {
+  /*font-family: 'Roboto', 'Open Sans',  sans-serif;
+  font-size: 16px;
+  line-height: 22px;*/
+  background-color: #f3f3f3;
+ width:100vw;
+} 
+
+/*Common Font-styles */
+
+.font--h1 {
+  font-size: 7vw;
+}
+
+.font--h2 {
+   font-size: 4vw;
+ }
+
+ .font--h3 {
+   font-size: 1.5rem;
+   @media screen and (min-width: 650px) {
+    font-size: 2rem; 
+   }
+ }
+.font--text {
+  color:black;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 150%;
+  margin:4px;
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.font--black {
+  color:black;
+}
+
+
+
+#container {
+ max-width: 95vw;
+  margin: 0 auto;
+}
+
+/*   Header   */
+.header__layout{
+  display:flex;
+  background-image: url('images/Sladalen\ 4.jpg') ;
+  background-size: cover;
+  position: relative;
+  height: 30vh;
+  @media screen and (min-width: 768px) {
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center align horizontally and vertically */
+  }
+}
+
+#header-title {
+  background-color: rgba(5, 5, 5, 0.478);
+
+  transition: 1s ease; /* Adding transition for smooth effect */
+  align-self: center; /* Centers horizontally */
+    justify-self: center;
+ 
+  margin:auto;
+  @media screen and (min-width: 768px) {
+    align-self: center; /* Centers horizontally */
+    justify-self: center;
+    padding:1rem 3rem;
+  }
+}
+
+.nav__container {
+  font-size:1.8vw ;
+  line-height: 250%;
+  background-color: #1c1c1c;
+  
+  padding:10px 0px;
+  position: absolute;
+  
+  
+
+  @media screen and (min-width: 768px) {
+
+    background-color: #2e2e2eae;
+   margin-top:auto;
+   line-height: 100%;
+    flex-direction: row; 
+    bottom: 0; /* Aligns at the bottom */
+    width: 100%; /* Makes nav full width */
+  } 
+} 
+
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+} 
+
+nav a:hover {
+  text-decoration: underline;
+} 
+
+nav > ul {
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row; 
+    justify-content: space-around; 
+  }   
+} 
+
+nav > ul > li {
+  margin-right: 20px;
+  @media screen and (min-width: 768px) {
+ 
+  }  
+ }
+
+
+.section__container {
+  background: white;
+  padding: 3vh 1vw;
+  width:100%;
+  margin:auto;
+  display: grid;
+  gap:10px;
+  grid-template-columns: 1fr ;
+  grid-auto-rows: 35vh;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 40vh;
+    width:90%;
+    gap:20px;
+    
+   } 
+}
+
+
+.setion__card{ 
+  background-size: cover;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition:2s ease; /* Adding transition for smooth effect */
+  @media screen and (min-width: 768px) {
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 5px rgb(105, 105, 105);
+  }
+}
+
+.col-1 {
+  grid-column-start: 1;
+}
+.col-2{
+  grid-column-start: 1;
+  @media screen and (min-width: 768px) {
+    grid-column-start: 2;
+   } 
+}
+
+.title-container {
+  background-color: rgba(5, 5, 5, 0.478);
+  padding:1em;
+  transition:  1s ease; /* Adding transition for smooth effect */
+ 
+justify-self: center;
+@media screen and (min-width: 768px) {
+ 
+}
+}
+
+
+.title-container:hover {
+  background-color: black;
+  padding:2rem;
+  border-radius: 20px;
+}
+
+#sladalen {
+  background-color: #b8b3af;
+
+  padding:1rem;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    padding:2rem;
+   }
+}
+
+/* Section Content Cards */
+#svarteborg {
+  background-image: url('images/Svarteborg1.jpg');
+  position: relative; 
+ }
+
+#beata {
+  background-image: url('images/Beata\ m\ barn.jpg');
+}
+
+#gerda {
+  background-image: url('images/Gerda1.jpg');
+}
+
+#pistolsmeder {
+  background-image:url('images/pistolsmed.jpg') ;
+}
+
+#kapare {
+  background-image: url('images/ölmevallakyrka.jpg')
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns:  1fr ;
+  background-color: rgb(139, 139, 139);
+  padding:1rem;
+@media screen and (min-width: 768px) {
+  grid-template-columns: 2fr 1fr ;
+  padding:2rem;
+ } 
+}
+
+.col-1-3 {
+  grid-column: 1;
+  @media screen and (min-width: 768px) {
+    padding:2rem;
+     
+   } 
+}
+.col-2-3{
+  grid-column: 1;
+  padding:1rem;
+  @media screen and (min-width: 768px) {
+    grid-column: 2;
+   } 
+}
+
+#map {
+  width:100%;
+   height:300px; 
+   border:0; 
+}
