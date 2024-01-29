@@ -54,16 +54,28 @@ body {
 }
 
 .font--large {
-  font-size: 1.5vw;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.font--cursive {
+  font-style: italic;
+}
+
+.responsive-text {
+  max-width: 100%;
 }
 
 .link--noDecoration {
   text-decoration: none;
 }
 
+.list_element {
+  margin: 2rem 3rem;
+}
 
 .figure__wrapper{
-  padding:2rem;
+  padding:1.2rem;
 }
 
 .image__element {
@@ -79,12 +91,16 @@ body {
 }
 
 .image__element--redsize {
-  max-width:15vw;
+  max-width:30vw;
 }
 
 .image__element--circle {
   border-radius: 50rem;
   box-shadow: 4px 4px 10px 5px rgb(105, 105, 105);
+}
+
+.image__element--embedded {
+  float:right;
 }
 
 /* Web Page structure */
@@ -97,8 +113,6 @@ body {
 /*   Header   */
 .header__layout{
   display:flex;
-  position: relative;
-  
   justify-content: space-between;
   @media screen and (min-width: 768px) {
     flex-direction: column;
@@ -188,7 +202,7 @@ body {
   width:100%;
   margin:auto;
   @media screen and (min-width: 768px) {
-    width:90%;
+    width:80%;
    } 
 }
 
@@ -228,6 +242,17 @@ body {
     gap:20px;
    } 
 }
+
+.grid-template--2-1col {
+  display:grid;
+  gap:10px;
+  grid-template-columns: 1fr ;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 2fr;
+    gap:20px;
+   } 
+}
+
 .grid-template--5col {
   display:grid;
   gap:10px;
@@ -259,25 +284,18 @@ body {
 
 
 
-/* Index page card layout */
+/* Index page card style */
 .section__card{ 
   background-size: cover;
   display:flex;
   align-items: center;
   justify-content: center;
-  transition:2s ease; /* Adding transition for smooth effect */
+  /*transition:2s ease; /* Adding transition for smooth effect */
   @media screen and (min-width: 768px) {
     border-radius: 20px;
     box-shadow: 4px 4px 10px 5px rgb(105, 105, 105);
   }
 }
-
-.section__container--white-layout{ 
-  background-color: white;
- 
-}
-
-
 .title-container {
   background-color: rgba(5, 5, 5, 0.478);
   padding:1rem;
@@ -287,10 +305,51 @@ body {
 
 .title-container:hover {
   background-color: black;
-  padding:2rem;
+  padding:2rem 1rem;
   border-radius: 20px;
 }
 
+
+
+/* content page style */
+.section__container--white-layout{ 
+  background-color: white;
+  @media screen and (min-width: 768px) {
+   padding:20px;
+  }
+}
+
+.section__container--grey-layout{ 
+  background-color: rgb(216, 224, 225);
+  @media screen and (min-width: 768px) {
+   padding:20px;
+  }
+}
+
+
+
+
+/* Footer */
+.footer--style {
+  background-color: rgb(45, 44, 44);
+  padding:1rem;
+@media screen and (min-width: 768px) {
+  padding:2rem;
+ } 
+}
+.footer__wrapper--layout{
+  padding:2rem; 
+ 
+}
+.footer__map--style {
+  width:100%;
+   height:300px; 
+   border:0; 
+   margin-top:1rem;
+}
+
+
+/* Section Content Cards */
 #sladalen {
   background-color: #b8b3af;
   padding:1rem;
@@ -300,27 +359,12 @@ body {
    }
 }
 
-
-/* Footer */
-footer {
-  background-color: rgb(139, 139, 139);
-  padding:1rem;
-@media screen and (min-width: 768px) {
-  padding:2rem;
- } 
-}
-
-
-
-
-/* Section Content Cards */
 #svarteborg {
   background-image: url('images/Svarteborg1.jpg');
-  position: relative; 
  }
 
 #beata {
-  background-image: url('images/Beata\ m\ barn.jpg');
+  background-image: url('images/Beata_m_barn.jpg');
 }
 
 #gerda {
@@ -335,17 +379,6 @@ footer {
   background-image: url('images/ölmevallakyrka.jpg')
 }
 
-
-
-#map {
-  width:100%;
-   height:300px; 
-   border:0; 
-}
-
-
-
-/*   pages */
 
 
 
