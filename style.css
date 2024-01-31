@@ -1,20 +1,17 @@
 * {
-padding:0;
-margin:0;
-box-sizing: border-box;
-font-family: 'Literata', serif;
-color: rgb(0, 0, 0);}
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Literata', serif;
+  color: rgb(0, 0, 0);
+}
 
 body {
-  /*font-family: 'Roboto', 'Open Sans',  sans-serif;
-  font-size: 16px;
-  line-height: 22px;*/
   background-color: #f3f3f3;
- width:100vw;
+  width:100vw;
 } 
 
 /*Common Font-styles */
-
 .font--h1 {
   font-size: 2rem;
   @media screen and (min-width: 768px) {
@@ -29,12 +26,12 @@ body {
     }
  }
 
- .font--h3 {
-   font-size: 1.5rem;
-   @media screen and (min-width: 768px) {
-    font-size: 2.3rem;
-    }
- }
+.font--h3 {
+  font-size: 1.5rem;
+  @media screen and (min-width: 768px) {
+  font-size: 2.3rem;
+  }
+}
 .font--text {
   font-size: 0.8rem;
   font-weight: 400;
@@ -45,16 +42,12 @@ body {
   }
 }
 
-.font--black {
-  color:rgb(0, 0, 0);
-}
-
 .font--white {
   color:white;
 }
 
 .font--large {
-  font-size: 1.3em;
+  font-size:1.2em;
   font-weight: bold;
 }
 
@@ -66,12 +59,9 @@ body {
   max-width: 100%;
 }
 
-.link--noDecoration {
-  text-decoration: none;
-}
-
 .list_element {
   margin: 2rem 3rem;
+  
 }
 
 .figure__wrapper{
@@ -99,6 +89,28 @@ body {
   box-shadow: 4px 4px 10px 5px rgb(105, 105, 105);
 }
 
+.logo {
+  margin-left:2rem;
+  padding:1.5rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+  }
+}
+.logo__img{
+  height:6rem;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 10px 4px rgb(25, 27, 27) ;
+  @media screen and (min-width: 768px) {
+    height:7rem;
+    border-radius: 3rem;
+  }
+}
+
 .image__element--embedded {
   float:right;
 }
@@ -111,61 +123,79 @@ body {
 }
 
 /*   Header   */
-.header__layout{
+
+.header__layout--large{
+  background-image: url('images/Sladalen4.jpg') ;
+  background-size: cover;
+  height: 25vh;
+  width:100%;
   display:flex;
   justify-content: space-between;
   @media screen and (min-width: 768px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center align horizontally and vertically */
-  }
-}
-
-.header__layout--large{
-  background-image: url('images/Sladalen\ 4.jpg') ;
-  background-size: cover;
-  height: 25vh;
-  @media screen and (min-width: 768px) {
     height: 50vh;
+    flex-direction: column;
+    justify-content:space-between;
   }
 }
 
 .header__layout--narrow{
   background-color: #7d7d7d;
-  height: 17vh;
+  height: 10rem;
+  width:100%;
   display:flex;
+  justify-content: space-between;
+  position:fixed;
+  left:0;
+  box-shadow: 0px 4px 10px 8px rgb(105, 105, 105);
   @media screen and (min-width: 768px) {
-    height: 30vh;
+    height: 13rem;
+    flex-direction: column;
+    align-items: flex-start /* Center align horizontally and vertically */
   }
 }
 
+
+/*index page */
 .header-title {
-  align-self: center; /* Centers horizontally */
-  justify-self: center;
   margin:auto;
+  background-color: rgba(5, 5, 5, 0.545);
   @media screen and (min-width: 768px) {
-    align-self: center; /* Centers horizontally */
-    justify-self: center;
-    padding:1rem 3rem;
+    border-radius: 20px;
+    padding:0rem 4rem;
   }
 }
 
-.header-title--background { background-color: rgba(5, 5, 5, 0.545)}
-
+/*navigation menu */
 .nav__container {
-  font-size:1.8vw ;
-  line-height: 250%;
   background-color: #1c1c1c;
-  padding:10px 0px 10px 10px;
+  padding:5px 0px 10px 10px;
   @media screen and (min-width: 768px) {
     background-color: #2e2e2eae;
-    margin-top:auto;
-    line-height: 100%;
-    flex-direction: row; 
-    bottom: 0; /* Aligns at the bottom */
-    width: 100%; /* Makes nav full width */
+    bottom: 0; 
+    width: 100%; 
   } 
 } 
+
+.menu {
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  @media screen and (min-width: 768px) {
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center;
+  }   
+} 
+
+.menu__menuItem {
+  font-size: 0.7rem;
+  margin-top: 5px;
+  margin-right: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }  
+ }
 
 .menu__menuItem a {
   color:#d0cfce;
@@ -176,37 +206,30 @@ body {
   font-weight: bold;
   color:white;
 } 
-
-.menu {
-  list-style: none;
-  display:flex;
-  flex-direction: column;
-  @media screen and (min-width: 768px) {
-    flex-direction: row; 
-    justify-content: space-around; 
-  }   
-} 
-
-.menu__menuItem {
-  margin-right: 20px;
-  @media screen and (min-width: 768px) {
-  }  
- }
+.link--noDecoration {
+  text-decoration: none;
+}
 
  /* Main Content */
  /*==========================*/
 
 .section__container {
   background: white;
-  padding: 3vh 1vw;
+  padding:  3vh 1vw;
   width:100%;
   margin:auto;
   @media screen and (min-width: 768px) {
     width:80%;
+    padding: 3vh 1vw;
    } 
 }
 
-
+.section__container--lower{
+  padding-top: 11rem;
+  @media screen and (min-width: 768px) {
+    padding-top:15rem;
+   } 
+}
 
 /* for Index-page layout*/
 .grid-template--2col-fixedHeight {
@@ -220,7 +243,6 @@ body {
     gap:20px;
    } 
 }
-
 
 /* content page layout */
 .grid-template--2col {
@@ -283,7 +305,6 @@ body {
 }
 
 
-
 /* Index page card style */
 .section__card{ 
   background-size: cover;
@@ -314,6 +335,7 @@ body {
 /* content page style */
 .section__container--white-layout{ 
   background-color: white;
+  padding:20px;
   @media screen and (min-width: 768px) {
    padding:20px;
   }
@@ -321,6 +343,7 @@ body {
 
 .section__container--grey-layout{ 
   background-color: rgb(216, 224, 225);
+  padding:20px;
   @media screen and (min-width: 768px) {
    padding:20px;
   }
