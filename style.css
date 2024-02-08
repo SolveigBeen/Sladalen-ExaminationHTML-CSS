@@ -13,23 +13,23 @@ body {
 
 /*Common Font-styles */
 .font--h1 {
-  font-size: 2rem;
+  font-size: 3em;
   @media screen and (min-width: 768px) {
-    font-size: 5rem;
+    font-size: 5em;
   }
 }
 
 .font--h2 {
-  font-size: 2rem;
+  font-size: 2em;
   @media screen and (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 3em;
   }
 }
 
 .font--h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   @media screen and (min-width: 768px) {
-    font-size: 2.3rem;
+    font-size: 2.3em;
   }
 }
 .font--text {
@@ -38,7 +38,7 @@ body {
   line-height: 150%;
   margin: 4px;
   @media screen and (min-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1.1em;
   }
 }
 
@@ -60,18 +60,17 @@ body {
 }
 
 .list_element {
-  margin: 2rem 3rem;
+  margin: 2em 3em;
 }
 
 .figure__wrapper {
-  padding: 1.2rem;
+  padding: 1.2em;
 }
 
 .image__element {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 3vh;
+  max-inline-size: 100%;
+  block-size: auto;
+  margin-bottom: 1em;
 }
 
 .image__element--card-style {
@@ -84,13 +83,13 @@ body {
 }
 
 .image__element--circle {
-  border-radius: 50rem;
+  border-radius: 50em;
   box-shadow: 4px 4px 10px 5px rgb(105, 105, 105);
 }
 
 .logo {
-  margin-left: 2rem;
-  padding: 1.5rem;
+  margin-left: 1.5em;
+  padding: 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,13 +100,19 @@ body {
   }
 }
 .logo__img {
-  height: 6rem;
-  border-radius: 2rem;
+  height: 6em;
+  border-radius: 2em;
   box-shadow: 0px 0px 10px 4px rgb(25, 27, 27);
   @media screen and (min-width: 768px) {
-    height: 7rem;
-    border-radius: 3rem;
+    height: 7em;
+
+    transition: box-shadow 4000ms;
   }
+}
+
+.logo__img:hover {
+  box-shadow: 0px 0px 20px 5px rgb(228, 222, 211);
+  transition: box-shadow 500ms;
 }
 
 .image__element--embedded {
@@ -127,7 +132,7 @@ body {
   background-image: url("images/Sladalen4.jpg");
   background-size: cover;
   height: 25vh;
-  width: 100%;
+  /*width: 100%;*/
   display: flex;
   justify-content: space-between;
   @media screen and (min-width: 768px) {
@@ -160,6 +165,12 @@ body {
   @media screen and (min-width: 768px) {
     border-radius: 20px;
     padding: 0rem 4rem;
+    transition: 5s;
+    &:hover {
+      letter-spacing: 10px;
+      transform: scale(1.3);
+      transition: 1000ms;
+    }
   }
 }
 
@@ -217,7 +228,8 @@ body {
   width: 100%;
   margin: auto;
   @media screen and (min-width: 768px) {
-    width: 80%;
+    width: 75%;
+
     padding: 3vh 1vw;
   }
 }
