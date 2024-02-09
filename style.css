@@ -119,15 +119,13 @@ body {
   float: right;
 }
 
-/* Web Page structure */
+/* Index-page */
 
 #content-container {
   max-width: 100vw;
   margin: 0 auto;
   position: relative;
 }
-
-/*   Header   */
 
 .header__layout--large {
   /*background-image: url("images/Sladalen4.jpg");
@@ -143,9 +141,23 @@ body {
     justify-content: space-between;
   }
 }
+/*index page */
+.header-title {
+  margin: auto;
+  background-color: rgba(5, 5, 5, 0.545);
+  @media screen and (min-width: 768px) {
+    border-radius: 20px;
+    padding: 0rem 4rem;
+    transition: 2s;
+    &:hover {
+      letter-spacing: 10px;
+      transform: scale(1.3);
+      transition: 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }
+}
 
-
-
+/*Header for content page */
 .header__layout--narrow {
   background-color: #9d988b;
   height: 10rem;
@@ -162,21 +174,7 @@ body {
   }
 }
 
-/*index page */
-.header-title {
-  margin: auto;
-  background-color: rgba(5, 5, 5, 0.545);
-  @media screen and (min-width: 768px) {
-    border-radius: 20px;
-    padding: 0rem 4rem;
-    transition: 2s;
-    &:hover {
-      letter-spacing: 10px;
-      transform: scale(1.3);
-      transition: 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-  }
-}
+
 
 /*navigation menu */
 .nav__container {
@@ -232,14 +230,13 @@ body {
   padding: 3vh 1vw;
   width: 100%;
   margin: auto;
-
   @media screen and (min-width: 768px) {
     width: 75%;
-
     padding: 3vh 1vw;
   }
 }
 
+/*content pages kompensera för fixed header*/
 .section__container--lower {
   padding-top: 11rem;
   @media screen and (min-width: 768px) {
@@ -327,7 +324,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*transition:2s ease; /* Adding transition for smooth effect */
+  transition:3s ease; /* Adding transition for smooth effect */
   @media screen and (min-width: 768px) {
     border-radius: 20px;
     box-shadow: 4px 4px 10px 5px rgb(105, 105, 105);
@@ -369,15 +366,15 @@ body {
   background-color: #6b675e;
   padding: 1rem;
   @media screen and (min-width: 768px) {
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
 }
 .footer__wrapper--layout {
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 .footer__map--style {
   width: 100%;
-  height: 300px;
+  height: 40vh;
   border: 0;
   margin-top: 1rem;
 }
