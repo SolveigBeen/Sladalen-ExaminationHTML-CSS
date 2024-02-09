@@ -13,23 +13,23 @@ body {
 
 /*Common Font-styles */
 .font--h1 {
-  font-size: 3em;
+  font-size: 3rem;
   @media screen and (min-width: 768px) {
-    font-size: 5em;
+    font-size: 5rem;
   }
 }
 
 .font--h2 {
-  font-size: 2em;
+  font-size: 2rem;
   @media screen and (min-width: 768px) {
-    font-size: 3em;
+    font-size: 3rem;
   }
 }
 
 .font--h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   @media screen and (min-width: 768px) {
-    font-size: 2.3em;
+    font-size: 2.3rem;
   }
 }
 .font--text {
@@ -144,8 +144,10 @@ body {
   }
 }
 
+
+
 .header__layout--narrow {
-  background-color: #7d7d7d;
+  background-color: #9d988b;
   height: 10rem;
   width: 100%;
   display: flex;
@@ -336,6 +338,7 @@ body {
   padding: 1rem;
   transition: 1s ease; /* Adding transition for smooth effect */
   justify-self: center;
+  z-index: 4;
 }
 
 .title-container:hover {
@@ -354,7 +357,7 @@ body {
 }
 
 .section__container--grey-layout {
-  background-color: rgb(216, 224, 225);
+  background-color: rgb(225, 223, 216);
   padding: 20px;
   @media screen and (min-width: 768px) {
     padding: 20px;
@@ -363,7 +366,7 @@ body {
 
 /* Footer */
 .footer--style {
-  background-color: rgb(45, 44, 44);
+  background-color: #6b675e;
   padding: 1rem;
   @media screen and (min-width: 768px) {
     padding: 2rem;
@@ -407,4 +410,14 @@ body {
 
 #kapare {
   background-image: url("images/ölmevallakyrka.jpg");
+}
+
+/*för att kompensera fixed header när ankarlänken scrollar.*/
+#ChristinaDahl:target,
+#GertAntonsson:target,
+#JohnAntonsson:target {
+  scroll-margin-top: 12rem;
+   @media screen and (min-width: 768px) {
+    scroll-margin-top: 17rem;
+  }
 }

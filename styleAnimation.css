@@ -8,12 +8,6 @@
   overflow: hidden;
   top: 0;
   z-index: 1;
-  /*
-  position: relative;
-  
-  /*display: flex;
-  align-items: center;
-  justify-content: center;   */
   filter: sepia(0.35);
   background-size: cover;
   transition: all 0.5s ease 0s;
@@ -21,15 +15,12 @@
     height: 50vh;
   }
 }
-.background:before {
-  position: absolute;
-  width: 100%;
-  z-index: -2;
-}
+
+/*   för att blurra ramen på header */
 .background:after {
   position: absolute;
   top: 0;
-  z-index: -2;
+  z-index: -2; /*för att title transistion ska funka*/
   content: "";
   width: 100%;
   height: 100%;
@@ -46,18 +37,16 @@
   height: 100%;
   filter: blur(0.45px) drop-shadow(0px 0px 0px #fff1);
 }
-
+/* vertikala fladdrande linjer */
 .film:after,
 .effect:after {
   content: "";
   width: 120%;
   height: 100%;
   position: absolute;
-
   top: 0;
   top: 0;
   left: 0;
-
   opacity: 0.5;
   animation: film-scratch 0.45s steps(1) infinite;
   background: repeating-linear-gradient(
@@ -66,8 +55,7 @@
     transparent 4px 37vmin
   );
 }
-
-.effect:after {
+*/ .effect:after {
   position: absolute;
   top: 0;
   left: 30%;
@@ -83,7 +71,6 @@
 
 .grain:after {
   position: absolute;
-
   top: 0;
   z-index: -2;
   content: "";
