@@ -1,8 +1,16 @@
+:root{
+
+  --clr--primary: rgb(225, 223, 216);   /*content background*/
+  --clr-secondary:#9d988b;    /*header, card*/
+  --clr-accent:#6b675e;     /*footer*/
+  --ff-base: "Literata", serif;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Literata", serif;
+  font-family: var(--ff-base);
   color: rgb(0, 0, 0);
 }
 
@@ -47,7 +55,7 @@ body {
 }
 
 .font--large {
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: bold;
 }
 
@@ -61,6 +69,11 @@ body {
 
 .list_element {
   margin: 2em 3em;
+}
+
+.list_element-nodeco{
+ list-style:none;
+ margin-left:2rem; 
 }
 
 .figure__wrapper {
@@ -159,7 +172,7 @@ body {
 
 /*Header for content page */
 .header__layout--narrow {
-  background-color: #9d988b;
+  background-color: var(--clr-secondary);
   height: 10rem;
   width: 100%;
   display: flex;
@@ -354,7 +367,7 @@ body {
 }
 
 .section__container--grey-layout {
-  background-color: rgb(225, 223, 216);
+  background-color: var(--clr--primary);
   padding: 20px;
   @media screen and (min-width: 768px) {
     padding: 20px;
@@ -363,7 +376,7 @@ body {
 
 /* Footer */
 .footer--style {
-  background-color: #6b675e;
+  background-color: var(--clr-accent);
   padding: 1rem;
   @media screen and (min-width: 768px) {
     padding: 1rem 2rem;
@@ -381,7 +394,7 @@ body {
 
 /* Section Content Cards */
 #sladalen {
-  background-color: #b8b3af;
+  background-color: var(--clr-secondary) ;
   padding: 1rem;
   flex-direction: column;
   @media screen and (min-width: 768px) {
